@@ -6,7 +6,7 @@ export default function LowStockScreen() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://172.20.10.4:8000/api/products/") // Replace with your local IP
+    fetch("http://172.20.10.3:8000/api/products/") // Replace with your local IP
       .then((res) => res.json())
       .then((data) => {
         const lowStock = data.filter((p: any) => p.stock < 50);

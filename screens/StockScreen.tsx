@@ -15,7 +15,7 @@ export default function StockScreen() {
   const navigation = useNavigation();
 
   useEffect(() => {
-    fetch("http://172.20.10.4:8000/api/products/") // Replace with your local IP
+    fetch("http://172.20.10.3:8000/api/products/") // Replace with your local IP
       .then((res) => res.json())
       .then((data) => {
         const inStock = data.filter((p: any) => p.stock > 0);
